@@ -55,11 +55,39 @@
     }
 
     .section ul {
-      padding-left: 1.5rem;
+      padding-left: 0;
+      list-style: none;
     }
 
     .section li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="checkbox"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 1rem;
+      appearance: none;
+      border: 2px solid #000;
+      border-radius: 0.25rem;
+      background-color: #fff;
+      cursor: pointer;
+      position: relative;
+    }
+
+    input[type="checkbox"]:checked {
+      background-color: #000;
+    }
+
+    input[type="checkbox"]:checked::after {
+      content: '\2713';
+      color: #fff;
+      font-size: 1rem;
+      position: absolute;
+      top: 0.05rem;
+      left: 0.35rem;
     }
 
     blockquote {
@@ -136,11 +164,11 @@
   <div class="section">
     <h2>Daily Check-In</h2>
     <ul>
-      <li>[ ] Moved my body today</li>
-      <li>[ ] Drank 2+ liters of water</li>
-      <li>[ ] Ate ~1,900–2,000 calories</li>
-      <li>[ ] Took time to breathe or stretch</li>
-      <li>[ ] Gave myself kindness</li>
+      <li><input type="checkbox" />Moved my body today</li>
+      <li><input type="checkbox" />Drank 2+ liters of water</li>
+      <li><input type="checkbox" />Ate ~1,900–2,000 calories</li>
+      <li><input type="checkbox" />Took time to breathe or stretch</li>
+      <li><input type="checkbox" />Gave myself kindness</li>
     </ul>
   </div>
 
