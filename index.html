@@ -98,7 +98,34 @@
       margin: 1rem 0;
       color: #333333;
     }
-  </style>
+    @media print {
+    body {
+      background: white !important;
+      color: black !important;
+      font-size: 12pt;
+    }
+
+    header, .section {
+      border: none !important;
+      page-break-inside: avoid;
+    }
+
+    button {
+      display: none !important;
+    }
+
+    .section {
+      margin: 1rem 0 !important;
+      padding: 0 !important;
+    }
+
+    input[type="checkbox"] {
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid black;
+    }
+  }
+</style>
 </head>
 <body>
   <header>
@@ -178,5 +205,11 @@
       "You deserve to feel good in your body. Progress is a love letter to yourself."
     </blockquote>
   </div>
+<div style="text-align: center; margin: 2rem auto;">
+  <button onclick="window.print()" style="background-color: black; color: white; border: none; padding: 1rem 2rem; font-size: 1rem; cursor: pointer; border-radius: 0.25rem;">
+    🖨️ Download & Print Glow Plan
+  </button>
+</div>
+
 </body>
 </html>
